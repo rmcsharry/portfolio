@@ -68,6 +68,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          rel: "stylesheet",
+          href: "https://bootswatch.com/4/yeti/bootstrap.min.css",
+        },
+      ]}
     />
   )
 }
