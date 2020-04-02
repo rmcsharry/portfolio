@@ -19,6 +19,9 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             strapiId
             Slug
+            blocks {
+              id
+            }
           }
         }
       }

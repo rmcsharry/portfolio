@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 // import Moment from "react-moment"
 
 import Layout from "../components/layout"
+import Block from "../components/block"
 
 export const query = graphql`  
   query PageQuery($strapiId: Int!) {
@@ -12,20 +13,40 @@ export const query = graphql`
       strapiId
       Name
       updated_at
+      blocks {
+        id
+        BlockName
+        BlockText
+        BlockType
+        TextPositionHorizontal
+        TextPositionVertical
+        BlockMedia {
+          publicURL
+        }
+      }
     }
   }
 `
 
-const PageTemplate = ({ data }) => {
-  console.log(data.strapiPage)
+class PageTemplate extends React.Component {
 
-  const page = data.strapiPage
-  return (
-    <Layout>
-      Test
-      <div>{page.Name}</div>
-    </Layout>
-  )
+  render() {
+    console.log(this.props.data.strapiPage)
+
+    const page = this.props.data.strapiPage
+
+    let blocks = page.blocks.map(function(hero, index) {
+      return <Block key={index} data={hero} />
+    })
+
+    return (
+      <Layout>
+        Test
+        {blocks}
+        <div>{page.Name}</div>
+      </Layout>
+    )
+  }
 }
 
 export default PageTemplate
