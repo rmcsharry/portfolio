@@ -71,8 +71,8 @@ function SEO({ description, lang, meta, title }) {
       link={[
         {
           rel: "stylesheet",
-          href: "https://bootswatch.com/4/yeti/bootstrap.min.css",
-        },
+          hre: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700"
+        }
       ]}
     />
   )

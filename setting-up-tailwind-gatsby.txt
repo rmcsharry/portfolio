@@ -1,0 +1,23 @@
+
+https://www.gatsbyjs.org/docs/tailwind-css/
+
+https://dev.to/dbshanks/an-efficient-react-tailwindcss-styled-components-workflow-458m
+
+https://nystudio107.com/blog/using-tailwind-css-with-gatsby-react-emotion-styled-components
+
+https://github.com/ben-rogerson/twin.macro
+
+
+npm install tailwindcss --save-dev
+
+npm install -D twin.macro @emotion/core @emotion/styled gatsby-plugin-emotion
+
+npx tailwind init
+
+If we just left things as-is, using only the tailwind.macro, every­thing would still work, but we would­n’t get the Tail­wind CSS 
+base styles to do things like apply a Nor­mal­ize CSS style reset, and oth­er glob­al styles.
+
+Because these base styles are super use­ful, we’ll con­fig­ure PostC­SS to gen­er­ate them for us. So let’s install the PostC­SS 
+pack­ages we’re going to use:
+
+npm install --save gatsby-plugin-postcss postcss-import postcss-preset-env stylelint

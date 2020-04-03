@@ -2,13 +2,19 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Seo from "./seo"
+import tw from 'twin.macro'
+import Navbar from "./navbar"
+
+const Wrapper = tw.div`bg-white`
+const Main = tw.main`mx-auto`
 
 const Layout = ({ children }) => {  
   return (
-    <>
-      <Seo title="Richard McSharry"/>
-      <main>{children}</main>
-    </>
+    <Wrapper>
+      <Seo title="Richard McSharry" />
+      <Navbar />
+      <Main>{children}</Main>
+    </Wrapper>
   )
 }
 
@@ -16,4 +22,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout 
+export default Layout
