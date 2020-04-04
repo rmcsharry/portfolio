@@ -42,7 +42,6 @@ class PageTemplate extends React.Component {
 
     return (
       <Layout>
-        Test
         {blocks}
         <div>{page.Name}</div>
       </Layout>

@@ -37,6 +37,9 @@ module.exports = {
           "block",
           "hero-a-type",
         ],
+        singleTypes: [
+          "logo"
+        ],
         queryLimit: 1000,
       },
     },

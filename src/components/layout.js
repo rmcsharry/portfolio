@@ -6,7 +6,7 @@ import tw from 'twin.macro'
 import Navbar from "./navbar"
 
 const Wrapper = tw.div`bg-white`
-const Main = tw.main`mx-auto`
+const Main = tw.main`mx-auto pt-16 z-50`
 
 const Layout = ({ children }) => {  
   return (
