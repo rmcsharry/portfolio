@@ -71,7 +71,11 @@ function SEO({ description, lang, meta, title }) {
       link={[
         {
           rel: "stylesheet",
-          hre: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700"
+          href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700"
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
         }
       ]}
     />

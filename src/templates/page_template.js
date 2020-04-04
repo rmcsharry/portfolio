@@ -20,6 +20,7 @@ export const query = graphql`
         BlockType
         TextPositionHorizontal
         TextPositionVertical
+        ParallaxScroll
         BlockMedia {
           publicURL
         }

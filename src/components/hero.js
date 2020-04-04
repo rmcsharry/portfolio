@@ -3,6 +3,7 @@ import React from "react"
 import tw from 'twin.macro'
 import styled from '@emotion/styled/macro'
 import { css } from '@emotion/core'
+import HeroText from "./hero_text"
 
 const ReactMarkdown = require('react-markdown')
 
@@ -22,27 +23,6 @@ const HeroWrapper = styled.div(() => [
     background: black;
   `
 ])
-const HeroText = styled.div(({hPosition}) => [
-  tw`text-white`,
-  css`
-    p {${tw`pt-4`}}
-  `,
-  hPosition === 'Right' ?
-  css`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-10%, -60%);
-  `: css`
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-  `
-])
 
 const Hero = props => {
   const block = props.data
@@ -50,11 +30,7 @@ const Hero = props => {
   return (
     <HeroWrapper>
       <HeroImage publicURL={block.BlockMedia.publicURL} />
-
-      {/* <img src={block.BlockMedia.publicURL} width="200px" alt="background"/> */}
-      <HeroText hPosition={block.TextPositionHorizontal}>
-        <ReactMarkdown source={block.BlockText} />
-      </HeroText>
+      <HeroText data={block} />
     </HeroWrapper>
   )
 }
