@@ -3,6 +3,7 @@ import { checkPropTypes } from "prop-types"
 import Hero from "./hero"
 
 import tw from 'twin.macro'
+import HeroParallex from "./hero_parallex"
 const Button = tw.button`bg-blue-200 border-blue-600 hover:bg-blue-900 border text-lg text-red-600 px-8 py-2 rounded`
 
 const Block = props => {
@@ -12,7 +13,7 @@ const Block = props => {
   const renderBlock = type => {
     switch (type) {
       case 'Hero':
-        return <Hero data={block} />
+        return <HeroParallex data={block} />
       default:
         return <></>
     }
