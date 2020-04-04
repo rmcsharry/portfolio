@@ -7,6 +7,7 @@
   "dependencies": {
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
+    "gatsby-plugin-lodash": "^3.2.1",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-postcss": "^2.2.1",
@@ -16,6 +17,7 @@
     "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.3.19",
     "jarallax": "^1.12.0",
+    "lodash": "^4.17.15",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",

@@ -5,6 +5,7 @@ module.exports = {
     author: `Richard McSharry`,
   },
   plugins: [
+    `gatsby-plugin-lodash`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

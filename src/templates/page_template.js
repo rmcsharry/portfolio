@@ -1,8 +1,7 @@
 import React from "react"  
 import { graphql } from "gatsby"
 
-// import ReactMarkdown from "react-markdown"  
-// import Moment from "react-moment"
+import { orderBy } from 'lodash'
 
 import Layout from "../components/layout"
 import Block from "../components/block"
@@ -15,6 +14,7 @@ export const query = graphql`
       updated_at
       blocks {
         id
+        OrderOnPage
         BlockName
         BlockText
         BlockType
@@ -36,7 +36,8 @@ class PageTemplate extends React.Component {
 
     const page = this.props.data.strapiPage
 
-    let blocks = page.blocks.map(function(hero, index) {
+    let sortedBlocks = orderBy(page.blocks, ['OrderOnPage'],['asc']);
+    let blocks = sortedBlocks.map(function(hero, index) {
       return <Block key={index} data={hero} />
     })
 

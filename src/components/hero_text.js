@@ -31,7 +31,7 @@ const Text = styled.div(({hPosition}) => [
     transform: translate(-50%, -50%);
     text-align: center;
   `: // Right
-  tw`absolute top-1/2 ml-12 sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2
+  tw`z-10 absolute top-1/2 ml-12 sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2
   `
 ])
 

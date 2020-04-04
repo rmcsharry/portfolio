@@ -8,6 +8,7 @@ module.exports = {
       '1/2': '50%',
     },
     zIndex: {
+      '10': 10,
       'max': '9999'
     },
     fontFamily: {
